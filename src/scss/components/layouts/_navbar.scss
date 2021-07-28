@@ -1,0 +1,16 @@
+.navbar {
+    background-color: $color-darkblue;
+    color: $color-white;
+    padding: 1rem;
+
+    &__nav-items {
+        display: flex;
+
+        li {
+            @include breakpoint("md") {
+                margin-right: 1rem;
+            }
+        }
+
+    }
+}

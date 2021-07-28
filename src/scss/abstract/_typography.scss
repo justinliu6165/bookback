@@ -1,0 +1,13 @@
+:root { 
+    font-size: 16px;
+    --base-font-size: 1rem; 
+    --scale: 1.25; 
+    
+    --p-size: var(--base-font-size); 
+    --h6-size: calc(var(--base-font-size) * var(--scale)); 
+    --h5-size: calc(var(--h6-size) * var(--scale)); 
+    --h4-size: calc(var(--h5-size) * var(--scale)); 
+    --h3-size: calc(var(--h4-size) * var(--scale)); 
+    --h2-size: calc(var(--h3-size) * var(--scale)); 
+    --h1-size: calc(var(--h2-size) * var(--scale)); 
+}

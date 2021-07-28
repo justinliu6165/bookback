@@ -1,0 +1,23 @@
+
+input,
+button {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+
+input {
+    border: 2px solid $color-lightgrey;
+    font-size: 1rem;
+}
+
+button {
+    background-color: $color-orange;
+    display: block;
+    box-shadow: 0 5px 20px #89caff94;
+    transition: box-shadow .3s ease-in-out;
+    &:hover {
+        box-shadow: none;
+    }
+}
