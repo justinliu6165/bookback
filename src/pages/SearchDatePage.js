@@ -1,16 +1,19 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-// import { createSelector } from 'reselect'
+import { useFirestoreConnect } from 'react-redux-firebase';
 
-// const selectBookings = createSelector(
-//     (state) => state.bookings.bookings
-// )
+const SearchDatePage = () => {
+    useFirestoreConnect([
+        { collection: 'bookings' }
+    ])
+    
+    const bookings = useSelector(state => {
+        return state.firestore.ordered.bookings
+    });
 
-const SearchDatePage = (props) => {
-    const bookings = useSelector(state => state.bookings.bookings);
     return (
         <div>
-            {bookings.map((booking, index) => (
+            {bookings && bookings.map((booking, index) => (
                     <div key={index}>
                         <div>{booking.name}</div>
                         <div>{booking.email}</div>

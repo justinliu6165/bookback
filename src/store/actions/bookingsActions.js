@@ -1,5 +1,5 @@
 export const createBookings = (booking) => {
-    return (dispatch, getState, { getFirebase, getFirestore }) => {
+    return (dispatch, getState, { getFirestore }) => {
         // Make async call to database
         const firestore = getFirestore();
 
