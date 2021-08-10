@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { createBookings } from '../../store/actions/bookingsActions'
+import { useDispatch } from 'react-redux'
 
 const BookingForm = () => {
-
+    const dispatch = useDispatch()
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
 
@@ -12,8 +14,14 @@ const BookingForm = () => {
 
     const handSubmit = (e) => {
         e.preventDefault()
-        alert("Submit")
-        reset()
+
+        let datestart = new Date()
+        let dateend = new Date(datestart.setDate(datestart.getDate() + 7))
+
+        if(name !== "" || email !== "") {
+            dispatch(createBookings({name, email, datestart, dateend}))
+            reset()
+        }
     }
 
     return (
