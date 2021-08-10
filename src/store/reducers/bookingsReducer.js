@@ -1,21 +1,5 @@
 const initState = {
-    bookings: [
-        {
-            name: "Justin Liu",
-            email: "sds@sda.com",
-            bookingRef: "sdkfljsrh23iu24h"
-        },
-        {
-            name: "Justin Liu",
-            email: "sds@sda.com",
-            bookingRef: "sdkfljsrh23iu24h"
-        },
-        {
-            name: "Justin Liu",
-            email: "sds@sda.com",
-            bookingRef: "sdkfljsrh23iu24h"
-        }
-    ]
+    bookings: []
 };
 
 const bookingsReducer = (state = initState, action) => {

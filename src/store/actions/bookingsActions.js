@@ -8,7 +8,7 @@ export const createBookings = (booking) => {
             .add({
                 ...booking,
                 createdAt: new Date()
-            })
+            }, { merge: true })
             .then(() => {
                 dispatch({type: "CREATE_BOOKING", payload: booking})
             })
