@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect } from 'react-redux-firebase';
+import Calendar from '../components/calendar/Calendar';
 
 const SearchDatePage = () => {
     useFirestoreConnect([
@@ -13,13 +14,14 @@ const SearchDatePage = () => {
 
     return (
         <div>
-            {bookings && bookings.map((booking, index) => (
+            {/* {bookings && bookings.map((booking, index) => (
                     <div key={index}>
                         <div>{booking.name}</div>
                         <div>{booking.email}</div>
                     </div>
                 )
-            )}
+            )} */}
+            <Calendar/>
         </div>
     )
 }
